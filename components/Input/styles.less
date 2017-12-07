@@ -1,0 +1,71 @@
+@import "~react-select/less/select.less";
+@import "../../assets/less/_custom.less";
+
+/* react-select styles */
+.Select.form-control {
+  padding: 0;
+}
+
+.Select-control {
+  border: none !important;
+  cursor: pointer;
+}
+
+.Select.is-disabled > .Select-control {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.Select-placeholder {
+  color: @input-color !important;
+  padding-left: 15px !important;
+}
+
+.Select-menu-outer {
+  margin: 2px -2px 0 -2px;
+  width: calc(100% + 1px);
+  border: 2px solid #CCC;
+  padding: 2px;
+  max-height: 300px;
+}
+
+.top-positioned .Select-menu-outer {
+  top: auto;
+  bottom: 100%;
+}
+
+.Select-arrow-zone {
+  padding-right: 10px;
+}
+
+.Select-option.is-focused {
+  background-color: #00AFEF;
+  color: #FFF;
+}
+
+/* react-toggle-button styles */
+
+div.toggle > div:first-child {
+  width: 160px !important;
+
+  > div {
+    color: red;
+  }
+}
+div.toggle.has-error > div:first-child {
+  border: solid 1px red;
+}
+
+.chat-text {
+  width: 100%;
+  position: relative;
+}
+
+.remaining-counter{
+    font-size: 18px;
+    font-weight: 600;
+    color: #a0cf67;
+    position: absolute;
+    top: 30px;
+    right: 123px;
+  }

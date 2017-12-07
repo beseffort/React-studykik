@@ -1,0 +1,102 @@
+@blue: #00afef;
+@orange: #f78e1e;
+@gray: #808080;
+
+.event-style(@color) {
+	color: @color;
+	border-color: @color;
+}
+.event-style-highlighted(@color) {
+	color: white;
+	background: @color;
+	border-color: @color;
+}
+
+.calendar-box {
+	height: 920px;
+
+	// react-big-calendar hacks
+	.rbc-header:not(.total-col-header),
+	.rbc-day-bg:not(.total-col):not(.rbc-now) {
+		background: white;
+	}
+  .rbc-date-cell,
+  .rbc-day-bg {
+    cursor: pointer;
+  }
+	.rbc-month-view {
+		font-size: 14px;
+	}
+	.rbc-row-segment {
+		padding: 0 12px;
+		margin-bottom: 3px;
+	}
+	.rbc-date-cell {
+		font-size: 18px;
+		font-weight: 400;
+	}
+	.rbc-event {
+		background-color: white;
+		border-radius: 0px;
+		border: solid 2px;
+		font-size: 11px;
+		line-height: 1.25;
+		font-weight: 400;
+		transition: all 0.25s linear;
+	}
+	.rbc-row-content {
+		.rbc-row:nth-child(3n+2) {
+			.rbc-event {
+				.event-style(@blue);
+				&:hover {
+					.event-style-highlighted(@blue);
+				}
+			}
+		}
+		.rbc-row:nth-child(3n+3) {
+			.rbc-event {
+				.event-style(@orange);
+				&:hover {
+					.event-style-highlighted(@orange);
+				}
+			}
+		}
+		.rbc-row:nth-child(3n+4) {
+			.rbc-event {
+				.event-style(@gray);
+				&:hover {
+					.event-style-highlighted(@gray);
+				}
+			}
+		}
+	}
+
+	.rbc-overlay {
+		.rbc-event:nth-child(3n+2) {
+			.event-style(@blue);
+			&:hover {
+				.event-style-highlighted(@blue);
+			}
+		}
+		.rbc-event:nth-child(3n+3) {
+			.event-style(@orange);
+			&:hover {
+				.event-style-highlighted(@orange);
+			}
+		}
+		.rbc-event:nth-child(3n+4) {
+			.event-style(@gray);
+			&:hover {
+				.event-style-highlighted(@gray);
+			}
+		}
+	}
+}
+
+.calendar-section .fields-holder {
+	overflow: visible;
+}
+
+.custom-select {
+	z-index: 5;
+}

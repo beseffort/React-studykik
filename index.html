@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- The first thing in any HTML file should be the charset -->
+  <meta charset="utf-8">
+  <!-- Make the page mobile compatible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Allow installing the app to the homescreen -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>StudyKIK</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+  <script src="https://use.fontawesome.com/90e3001cc4.js"></script>
+</head>
+<body>
+<!-- The app hooks into this div -->
+<div id="app"></div>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
+<!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.4/socket.io.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAwC6oPs9ANk62-1mWvdnsAm5xCVrp45Y&libraries=places"></script>
+</body>
+</html>

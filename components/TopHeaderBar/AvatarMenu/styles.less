@@ -1,0 +1,24 @@
+.logged-user-area {
+  cursor: pointer;
+  width: 239px;
+
+  .opener {
+    &.active {
+      background-color: #76daff;
+    }
+  }
+  .avatar-menu {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    -webkit-transition: height 0.5s;
+    transition: height 0.5s;
+
+    &.avatar-menu-close {
+      height: 0 !important;
+      -webkit-transition: height 0.5s;
+      transition: height 0.5s;
+    }
+  }
+}
